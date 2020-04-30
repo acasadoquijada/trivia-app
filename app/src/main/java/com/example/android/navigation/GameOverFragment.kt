@@ -16,8 +16,10 @@
 
 package com.example.android.navigation
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -32,7 +34,7 @@ class GameOverFragment : Fragment() {
         val binding: FragmentGameOverBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_over, container, false)
         binding.tryAgainButton.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_gameOverFragment2_to_titleFragment)
+                Navigation.createNavigateOnClickListener(GameOverFragmentDirections.actionGameOverFragment2ToTitleFragment())
         )
         return binding.root
     }
